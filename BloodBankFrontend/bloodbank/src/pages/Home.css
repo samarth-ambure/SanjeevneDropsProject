@@ -1,0 +1,208 @@
+/* src/pages/Home.css */
+
+/* --- General Home Page Container --- */
+.home-page-container {
+  padding-bottom: 3rem; /* Add some padding at the bottom for spacing */
+  background-color: #f8f8f8; /* Light background for the entire page body */
+}
+
+
+/* --- Hero Section Styling --- */
+.hero-section {
+  background-color: #ffffff; /* White background for the hero card */
+  padding: 5rem 2rem; /* More padding top/bottom */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 3rem; /* Space below the hero section */
+  position: relative; /* For potential future background image or overlay */
+  overflow: hidden; /* Ensures shadows/borders are contained */
+}
+
+.hero-section h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.5rem; /* Larger, more impactful heading */
+  font-weight: 700;
+  color: #D32F2F; /* Your red brand color */
+  margin-bottom: 1rem;
+}
+
+.hero-section p.lead {
+  font-size: 1.25rem;
+  color: #555; /* Softer text color */
+  max-width: 700px; /* Constrain width for readability */
+  margin: 0 auto 2rem auto; /* Center and add space below */
+}
+
+.hero-section .btn {
+  font-weight: 600;
+  padding: 0.8rem 2rem; /* Larger buttons */
+  border-radius: 50px; /* Pill-shaped buttons */
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-section .btn-danger {
+  background-color: #D32F2F; /* Your brand red */
+  border-color: #D32F2F;
+}
+
+.hero-section .btn-danger:hover {
+  background-color: #b71c1c; /* Slightly darker red on hover */
+  border-color: #b71c1c;
+  transform: translateY(-2px); /* Subtle lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .btn-outline-danger {
+  color: #D32F2F;
+  border-color: #D32F2F;
+}
+
+.hero-section .btn-outline-danger:hover {
+  background-color: #D32F2F;
+  color: #fff !important; /* Text white on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .btn-primary {
+  background-color: #388E3C; /* Your brand green */
+  border-color: #388E3C;
+}
+
+.hero-section .btn-primary:hover {
+  background-color: #2e7d32; /* Slightly darker green on hover */
+  border-color: #2e7d32;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* --- Stats Section Styling --- */
+.stats-section .card {
+  border: none; /* Remove default card border */
+  border-radius: 0.75rem; /* More rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slightly more prominent shadow */
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden; /* Ensures content stays within rounded borders */
+}
+
+.stats-section .card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.stats-section .card-body {
+  padding: 2.5rem 1.5rem; /* More padding inside cards */
+  background-color: #ffffff; /* White background for stat cards */
+}
+
+.stats-section h3 {
+  font-size: 3rem; /* Larger numbers for impact */
+  font-weight: 700;
+  color: #D32F2F; /* Your brand red */
+  margin-bottom: 0.5rem;
+}
+
+.stats-section p {
+  font-size: 1rem;
+  color: #666; /* Softer text color */
+}
+
+
+/* --- How It Works Section Styling --- */
+.how-it-works-section {
+  background-color: #f8f8f8; /* A very light background to distinguish it */
+  padding: 5rem 0; /* Ample vertical padding */
+  margin-top: 3rem; /* Space from the stats section */
+}
+
+.how-it-works-section h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem; /* Prominent heading */
+  font-weight: 700;
+  color: #388E3C; /* Your brand green */
+  margin-bottom: 3rem; /* Space below heading */
+}
+
+.how-it-works-section .step-card {
+  background-color: #ffffff; /* White background for step cards */
+  border: none;
+  border-radius: 0.75rem; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 2.5rem 1.5rem; /* Generous padding */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  height: 100%; /* Ensure cards in a row have equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center content horizontally */
+}
+
+.how-it-works-section .step-card:hover {
+  transform: translateY(-8px); /* More pronounced lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.how-it-works-section .step-icon {
+  font-size: 3.5rem; /* Larger icons */
+  color: #D32F2F; /* Your brand red for icons */
+  margin-bottom: 1.5rem; /* Space below icon */
+  /* If using FontAwesome, ensure `size="3x"` in JSX makes it large enough */
+}
+
+.how-it-works-section h4 {
+  font-weight: 600;
+  color: #333; /* Darker text for titles */
+  margin-bottom: 0.75rem;
+}
+
+.how-it-works-section p {
+  font-size: 0.95rem;
+  color: #777; /* Lighter text for descriptions */
+  line-height: 1.5;
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .hero-section p.lead {
+    font-size: 1rem;
+  }
+  .hero-section .btn {
+    padding: 0.7rem 1.5rem;
+  }
+  .stats-section h3 {
+    font-size: 2.5rem;
+  }
+  .how-it-works-section h2 {
+    font-size: 2rem;
+  }
+  .how-it-works-section .step-icon {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  .hero-section p.lead {
+    font-size: 0.9rem;
+  }
+  .hero-section .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .how-it-works-section .step-card {
+    padding: 1.5rem;
+  }
+  .how-it-works-section .step-icon {
+    font-size: 2.5rem;
+  }
+}

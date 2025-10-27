@@ -1,0 +1,69 @@
+/* src/components/AuthNavbar.css */
+
+.auth-navbar {
+  /* No explicit background color, making it transparent by default */
+  background-color: transparent; /* Changed from #f8f8f8 */
+  padding: 1rem 1rem; /* Adjust padding as needed */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Push content to the right if no brand on left */
+  border-bottom: none; /* Remove border if you want a floating look */
+  /* Remove border-bottom: 1px solid #eee; */
+  width: 100%;
+}
+
+.auth-navbar .container-fluid {
+    display: flex;
+    justify-content: flex-end; /* Ensure nav items are pushed to the right */
+    width: 100%;
+    align-items: center;
+}
+
+.auth-navbar-nav { /* New class for the ul to target specifically */
+  display: flex; /* Makes list items horizontal */
+  list-style: none; /* Removes bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+.auth-navbar-nav .nav-item {
+  margin-left: 10px; /* Space between the items */
+}
+
+/* Styling for the eclipse-like link */
+.auth-nav-link {
+  font-weight: 500;
+  color: #333 !important; /* Default link text color */
+  text-decoration: none; /* Remove underline */
+  padding: 8px 15px; /* Padding inside the "eclipse" shape */
+  border-radius: 20px; /* Make it rounded / eclipse-like */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  display: inline-block; /* Essential for padding and border-radius to work */
+}
+
+.auth-nav-link:hover {
+  background-color: #D32F2F; /* Background color on hover (your red brand color) */
+  color: #fff !important; /* Text color on hover */
+  /* Remove the ::after pseudo-element hover effect here if you're going for background change */
+  /* The underline hover effect might conflict with this new style */
+}
+
+/* To remove the old ::after underline effect for auth-nav-link */
+.auth-nav-link::after {
+  content: none; /* Remove the underline pseudo-element */
+}
+
+/* Brand Colors (from your existing CSS, keep them if used elsewhere) */
+/* .brand-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.green-text {
+  color: #388E3C;
+}
+
+.red-text {
+  color: #D32F2F;
+} */

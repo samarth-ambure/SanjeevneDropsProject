@@ -1,0 +1,111 @@
+/* Sticky Navbar */
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  border-bottom: 2px solid #D32F2F;
+}
+
+/* Menu Items Hover Effect */
+.nav-link {
+  font-weight: 500;
+  color: #333 !important;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #D32F2F !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: #D32F2F;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Brand Colors */
+.brand-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+}
+
+.green-text {
+  color: #388E3C;
+}
+
+.red-text {
+  color: #D32F2F;
+}
+.navbar-search-logout-container {
+  /* Added styles to ensure a clean layout */
+  /* You can adjust these margins as needed */
+}
+
+.search-bar-container input.form-control {
+  border-radius: 20px; /* Pill-shaped search bar */
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  height: auto;
+  border-color: #ddd;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-input-wrapper .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none; /* Prevents the icon from being clicked and blocking the input */
+}
+
+.search-input-wrapper .search-input {
+  text-indent: 1.5rem; /* Pushes the text to the right of the icon */
+  border-radius: 20px;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  height: auto;
+  border-color: #ddd;
+  transition: all 0.3s ease-in-out;
+}
+
+/* NEW: This is the updated focus style that removes the blue highlight */
+.search-input-wrapper .search-input:focus {
+  outline: none; /* Removes the default browser outline */
+  box-shadow: none; /* Removes the box shadow from Bootstrap/browser */
+  border-color: #ddd; /* Sets the border back to its original color to show no change */
+}
+
+
+/* NEW: Styles for the red eclipse logout button */
+.nav-link-eclipse {
+  background-color: #D32F2F;
+  color: #fff !important;
+  border-radius: 20px;
+  font-weight: 500;
+  padding: 8px 15px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  border: none;
+}
+
+.nav-link-eclipse:hover {
+  background-color: #b71c1c; /* Slightly darker red on hover */
+  color: #fff !important;
+}

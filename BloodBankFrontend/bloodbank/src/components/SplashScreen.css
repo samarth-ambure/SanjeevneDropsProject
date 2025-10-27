@@ -1,0 +1,46 @@
+/* src/components/SplashScreen.css */
+
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f8f8; /* Or your preferred background color */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;   /* Center vertically */
+  flex-direction: column;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.splash-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splash-logo {
+  max-width: 40%; /* Make it bigger: Adjust this percentage as needed (e.g., 50%, 70%) */
+  height: auto;
+  animation: pulse 1.5s infinite alternate;
+  /* Ensure it's not absolutely positioned if that was causing issues */
+}
+
+/* Optional: Animation for the logo */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Optional: Styling for loading text */
+.loading-text {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+}
